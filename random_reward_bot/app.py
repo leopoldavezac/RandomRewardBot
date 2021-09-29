@@ -7,11 +7,11 @@ app = Flask(__name__)
 @app.route('/bot', methods=['POST'])
 def bot():
 
-    in_msg = request.values.get('Body', '')
+    in_msg_str = request.values.get('Body', '')
 
     resp = MessagingResponse()
-    out_msg = resp.message()
-    out_msg.body(in_msg)
+    resp_msg = resp.message()
+    resp_msg.body(in_msg_str)
     
     return str(resp)
 
