@@ -1,7 +1,7 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 
-from random_reward_bot.rewards import get_reward
+from rewards import get_reward
 
 app = Flask(__name__)
 
